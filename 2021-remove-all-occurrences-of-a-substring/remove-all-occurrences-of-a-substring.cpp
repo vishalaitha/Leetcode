@@ -2,7 +2,7 @@ class Solution {
 public:
     bool check(stack<char> st, string &part){
         int n=part.size()-1;
-        while(!st.empty() &&n>=0 && st.top()==part[n]){
+        while(n>=0 && st.top()==part[n]){
             st.pop();
             n--;
         }
@@ -11,8 +11,8 @@ public:
     string removeOccurrences(string s, string part) {
         stack<char> st;
         int n=part.size();
-        for(int j=0;j<s.size();j++){
-            st.push(s[j]);
+        for(auto i: s){
+            st.push(i);
             if(st.size()>=n){
                 if(check(st,part)){
                     int n1=part.size();
