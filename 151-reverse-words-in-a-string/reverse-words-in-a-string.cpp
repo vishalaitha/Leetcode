@@ -12,7 +12,6 @@ public:
                      temp+=s[j];
                      j--;
                  }
-                //  cout<<temp<<endl;
                  while(j>=0&&s[j]==' ') j--;
                  reverse(temp.begin(),temp.end());
                  ans+=temp;
@@ -21,7 +20,6 @@ public:
             }
         }
         if(*ans.rbegin()==' ') ans.pop_back();
-        // cout<<ans<<endl;
         return ans;
     }
 };
