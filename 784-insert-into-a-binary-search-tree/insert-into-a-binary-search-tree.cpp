@@ -20,11 +20,6 @@ public:
         return temp;
     }
     void helper(TreeNode*root,int val){
-        if(root==NULL){
-            cout<<"line 24"<<endl;
-            return;
-        }
-        else{
             if(root->val<val){
                 if(root->right==NULL){
                     TreeNode*temp=new TreeNode(val);
@@ -43,6 +38,5 @@ public:
                     helper(root->left,val);
                 }
             }
-        }
     }
 };
